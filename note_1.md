@@ -109,10 +109,10 @@
 
 > ### Somehting like this...
 
-![markdown Logo](./images/key_relation.png)
+<!-- ![markdown Logo](./images/key_relation.png) -->
 
 > ## Every row in a database musy have a unique identifier
 * ## This has to be unique to avoid the same problem we saw above.
  ## *Redudancy* is *bad* coz its leads to confusion 😋😋😋 . 
  * Names cannot be used as a unique identifier as people can have unique names
- * We cannot ask people to change their names coz we need to add them to a database lol. That would suck 
+ * We cannot ask people to change their names coz we need to add them to a database lol. That would suck 😢 😢 😢
