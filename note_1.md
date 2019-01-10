@@ -125,25 +125,59 @@
 
 
  ##### Table 1 - Admissions Department
-| ID |  Name    | Address   |
-| -- |  ----    |  -------  |
-| 1  |  John    | New York California  |
-| 2  |  Mary    | New Jsy   |
-| 3  |  Rich    | Toronto   |
-| 4  |  Jake    | Greenland |
+| ID     |  Name    | Address   |
+| --     |  ----    |  -------  |
+| 🔑 1  |  John    | New York California  |
+| 🔑 2  |  Mary    | New Jsy   |
+| 🔑 3  |  Rich    | Toronto   |
+| 🔑 4  |  Jake    | Greenland |
+ 
+ ##### Table 2- Accounts Department
+| ID     |   Paid |
+| ----   | -------|   
+| 🔑 1   |   300  | 
+| 🔑 2   |   500  |  
+| 🔑 3   |   1000 |   
+| 🔑 4   |   400  |   
+
 
 *  In the tables 1 and 2
     * Both tables are connected with a unique identifier ( Primary Key 🔑)
     * HOWEVER, the tables are still not relational... 😢
     * WHY? bcoz of two main problems 
-        * If someone else also paid an amount of 💰 300 dollars, How can we check from the "paid" column which student paid 300 dollars. basically, 300 💰 can be repeated among different students. It is not unique. Just by looking at the paid amount, we cannot determine which amount 300 💰 goes to which person
+        * If someone else also paid an amount of 💰 300 dollars, How can we check from the "paid" column which student paid 300 dollars. basically, 300 can be repeated among different students. It is not unique. Just by looking at the paid amount, we cannot determine which amount 300 💰 goes to which person
         * What if we need an invoice number, there is no way to add that field
         * If a student 👶 wants to add another payment, (multiple payments), how will we keep track, 9n the current database, we will have to add another record with same primary key 🔑 to add another payment. 
-        * BUT this violates the rule of no redudancy 🔥 🔥 . In a good database design, the primary key should only belong to one record. No duplication 👎 👎 👎 
- ##### Table 2- Accounts Department
-| ID |   Paid |
-| -- | -------|   
-| 1  |   300  | 
-| 2  |   500  |  
-| 3  |   1000 |   
-| 4  |   400  |   
+        * BUT this violates the rule of no redudancy  . In a good database design, the primary key should only belong to only one record. No duplication 
+
+
+> Solution - Foreign Key 🔑
+
+ 
+ ##### Table 1- Accounts Department
+| Transaction ID       |   Paid |       StudentID   |
+|           ----       | -------|       ----------  |
+|    🔑 001            |   300  |       1234        |
+|    🔑 002            |   500  |       3245        |
+|    🔑 003            |   1000 |       7345        |
+|    🔑 004            |   400  |       1234        |
+|    🔑 005            |   400  |       2453        |
+|    🔑 006            |   400  |       3245        |
+|    🔑 007            |   400  |       1234        |
+|    🔑 008            |   400  |       7345        |
+
+
+ ##### Table 2 - Admissions Department
+| Student ID            |  Name    | Address   |
+|        --             |  ----    |  -------  |
+|        🔑 1234       |  John    | New York California  |
+|        🔑 3245       |  Mary    | New Jsy   |
+|        🔑 2453       |  Rich    | Toronto   |
+|        🔑 7345       |  Jake    | Greenland |
+
+![markdown logo](./images/foreign_primary_relationship.png)
+
+* Now each primary key of a student is being used as a 🔑primary key in the Student Table and as a 🔑foreign key linking to its transaction in the Accounts table.
+* This way, Accounts table can have multiple records for students with multiple transactions / payments
+* All we have to do is repeat the Student ID associated with the transaction HOWEVER, every transaction/payment is different even if belongs to 1 student 👶
+* This ensures all transactions can be tracked with a unique identifier ( 🔑 ) and not repeat the Student ID again and again as it is being used as a 🔑 primary key in its own table 
