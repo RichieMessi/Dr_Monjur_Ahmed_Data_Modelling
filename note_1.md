@@ -59,7 +59,7 @@
 
 > Why Relational Database 
 
- Table 1 - Admissions Department
+ ##### Table 1 - Admissions Department
 | ID |  Name    | Address   |
 | -- |  ----    |  -------  |
 | 1  |  John    | New York California  |
@@ -75,7 +75,7 @@
     * Something is clearly wrong with this design
     * Lets say John used to live in California at first but then moved to CANADA, after some years we query the database, how can I know which one is the correct address when a record shows two different addresses. This creates a problem
     * This is one reason why we make a relational database
- Table 2- Accounts Department
+##### Table 2- Accounts Department
 | ID |  Name    | Address   |       Fees    |   Paid    | Due   |
 | -- |  ----    |  -------  |       ------- | -------   | ------|
 | 1  |  John    | New York Canada|  1000    |   300     |  700  |
@@ -86,7 +86,7 @@
 >  NOW here is how a relational database would look like. This is not a good database design however, this shows how a duplicate address problem that we saw above can be rectified
 
 
- Table 1 - Admissions Department
+##### Table 1 - Admissions Department
 | ID |  Name    | Address   |
 | -- |  ----    |  -------  |
 | 1  |  John    | New York California  |
@@ -100,7 +100,7 @@
     * This design still has problems that we will fix as we go further. 
     * For the meantime, this  solves the mistaching problem of the address
     * In both tables, every record in both tables is linked to each other through an ID. Both records in two tables with common ID are linked to each otehr through the ID. 
- Table 2- Accounts Department
+ ##### Table 2- Accounts Department
 | ID |  Fees    |   Paid    | Due   |
 | -- |  ------- | -------   | ------|
 | 1  |  1000    |   300     |  700  |
@@ -124,7 +124,7 @@
 
 
 
- Table 1 - Admissions Department
+ ##### Table 1 - Admissions Department
 | ID |  Name    | Address   |
 | -- |  ----    |  -------  |
 | 1  |  John    | New York California  |
@@ -140,7 +140,7 @@
         * What if we need an invoice number, there is no way to add that field
         * If a student 👶 wants to add another payment, (multiple payments), how will we keep track, 9n the current database, we will have to add another record with same primary key 🔑 to add another payment. 
         * BUT this violates the rule of no redudancy 🔥 🔥 . In a good database design, the primary key should only belong to one record. No duplication 👎 👎 👎 
- Table 2- Accounts Department
+ ##### Table 2- Accounts Department
 | ID |   Paid |
 | -- | -------|   
 | 1  |   300  | 
