@@ -2,11 +2,11 @@
 
 > ## Learning Objectives 
 ## Understand...
-* FFFFFFFFF Database and Relational Database
-* FFFFFFFFF Data Modelling 
-* FFFFFFFFF Entitiy Relationship Diagram (ERD)
-* FFFFFFFFF Design Database
-* FFFFFFFFF Analyze business/organization to model data requirement
+* Database and Relational Database
+* Data Modelling 
+* Entitiy Relationship Diagram (ERD)
+* Design Database
+* Analyze business/organization to model data requirement
 
 ---
 >## Course Outline
