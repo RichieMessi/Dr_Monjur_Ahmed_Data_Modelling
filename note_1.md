@@ -200,3 +200,34 @@
 |    7345       |  Jake    | Greenland |
 
 
+
+> # Entity Relationship Diagrams (ERD)
+* It is a diagram that shows a relationship among entities
+
+
+### Problem Scanerio
+* A small burder shop sells differenk kinds of burgers. The  manager looks after the overall operations of the store. Other staff include the chef and two front counter repsentatives. The customers userd to order only by walking-in into the store, but the shop recently added phone ordering. The shop has a loyal customer base, and the phone ordering system is implemented as a relust of survey among the customers
+
+
+### Entities found in Problem Scanerio
+* A small burder shop sells differenk kinds of __~~burgers~~__. The  __~~manager~~__ looks after the overall operations of the store. Other staff include the __~~chef~~__ and two __~~front~~__ __~~counter~~__ __~~repsentatives~~__. The __~~customers~~__ userd to order only by walking-in into the store, but the shop recently added __~~phone~~__ __~~ordering~~__. The shop has a loyal customer base, and the phone ordering system is implemented as a relust of survey among the customers
+
+    * > Food
+        * Burgers
+    * > Employee
+        * Manager
+        * Staff Members
+    * > Customer
+        * Customers
+    * > Order
+        * Orders
+* All entities should be named as a singular and not plural as a good practice.
+* Employee not Employe~~s~~
+* Customer not Customer~~s~~
+* Entities found are
+    * Food
+    * Employee
+    * Customer
+    * Order
+---
+![markdoun logo](./images/ERD.png)
