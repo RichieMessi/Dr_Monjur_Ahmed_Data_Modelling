@@ -239,6 +239,6 @@
 *  One passport can only be given to one person. or SIN number belongs to one individual only
 
 * One to Many
-* ![markdown logo](./images/manyTomany.png)
+* ![markdown logo](./images/manyTOmany.png)
 * Denoted by a multiple end points. 
 <!-- * It says that entity A might have associations with more than one type of entity B -->
