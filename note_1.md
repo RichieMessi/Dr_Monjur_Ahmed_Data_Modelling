@@ -181,3 +181,22 @@
 * This way, Accounts table can have multiple records for students with multiple transactions / payments
 * All we have to do is repeat the Student ID associated with the transaction HOWEVER, every transaction/payment is different even if belongs to 1 student 👶
 * This ensures all transactions can be tracked with a unique identifier ( 🔑 ) and not repeat the Student ID again and again as it is being used as a 🔑 primary key in its own table 
+
+
+
+
+> # Meta Data
+* It is the data about data
+* What kind of data we store in a column
+
+Let's say in the below table, what kind of data do we store in each column or domain? 
+Its either numbers or characters etc
+Datatype is metadata. Digits, Characters or Alpha Numerics (both chars and nums)
+| 🔑Student ID            |  Name    | Address   |
+|        --             |  ----    |  -------  |
+|    1234       |  John    | New York California  |
+|    3245       |  Mary    | New Jsy   |
+|    2453       |  Rich    | Toronto   |
+|    7345       |  Jake    | Greenland |
+
+
