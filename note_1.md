@@ -188,10 +188,10 @@
 > # Meta Data
 * It is the data about data
 * What kind of data we store in a column
+* Let's say in the below table, what kind of data do we store in each column or domain? 
+* Its either numbers or characters etc
+* Datatype is metadata. Digits, Characters or Alpha Numerics (both chars and nums)
 
-Let's say in the below table, what kind of data do we store in each column or domain? 
-Its either numbers or characters etc
-Datatype is metadata. Digits, Characters or Alpha Numerics (both chars and nums)
 | 🔑Student ID            |  Name    | Address   |
 |        --             |  ----    |  -------  |
 |    1234       |  John    | New York California  |
