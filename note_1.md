@@ -125,20 +125,20 @@
 
 
  ##### Table 1 - Admissions Department
-| ID     |  Name    | Address   |
+| 🔑ID     |  Name    | Address   |
 | --     |  ----    |  -------  |
-| 🔑 1  |  John    | New York California  |
-| 🔑 2  |  Mary    | New Jsy   |
-| 🔑 3  |  Rich    | Toronto   |
-| 🔑 4  |  Jake    | Greenland |
+|   1  |  John    | New York California  |
+|   2  |  Mary    | New Jsy   |
+|   3  |  Rich    | Toronto   |
+|   4  |  Jake    | Greenland |
  
  ##### Table 2- Accounts Department
-| ID     |   Paid |
+| 🔑ID     |   Paid |
 | ----   | -------|   
-| 🔑 1   |   300  | 
-| 🔑 2   |   500  |  
-| 🔑 3   |   1000 |   
-| 🔑 4   |   400  |   
+|   1   |   300  | 
+|   2   |   500  |  
+|   3   |   1000 |   
+|   4   |   400  |   
 
 
 *  In the tables 1 and 2
@@ -155,25 +155,25 @@
 
  
  ##### Table 1- Accounts Department
-| Transaction ID       |   Paid |       StudentID   |
+| 🔑Transaction ID       |   Paid |       StudentID   |
 |           ----       | -------|       ----------  |
-|    🔑 001            |   300  |       1234        |
-|    🔑 002            |   500  |       3245        |
-|    🔑 003            |   1000 |       7345        |
-|    🔑 004            |   400  |       1234        |
-|    🔑 005            |   400  |       2453        |
-|    🔑 006            |   400  |       3245        |
-|    🔑 007            |   400  |       1234        |
-|    🔑 008            |   400  |       7345        |
+|     001            |   300  |       1234        |
+|     002            |   500  |       3245        |
+|     003            |   1000 |       7345        |
+|     004            |   400  |       1234        |
+|     005            |   400  |       2453        |
+|     006            |   400  |       3245        |
+|     007            |   400  |       1234        |
+|     008            |   400  |       7345        |
 
 
  ##### Table 2 - Admissions Department
-| Student ID            |  Name    | Address   |
+| 🔑Student ID            |  Name    | Address   |
 |        --             |  ----    |  -------  |
-|        🔑 1234       |  John    | New York California  |
-|        🔑 3245       |  Mary    | New Jsy   |
-|        🔑 2453       |  Rich    | Toronto   |
-|        🔑 7345       |  Jake    | Greenland |
+|    1234       |  John    | New York California  |
+|    3245       |  Mary    | New Jsy   |
+|    2453       |  Rich    | Toronto   |
+|    7345       |  Jake    | Greenland |
 
 ![markdown logo](./images/foreign_primary_relationship.png)
 
