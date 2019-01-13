@@ -239,6 +239,28 @@
 *  One passport can only be given to one person. or SIN number belongs to one individual only
 
 * One to Many
-* ![markdown logo](./images/manyTOmany.png)
+* ![markdown logo](./images/oneTOmany.png)
 * Denoted by a multiple end points. 
-<!-- * It says that entity A might have associations with more than one type of entity B -->
+
+
+* ![markdown logo](./images/ManyTOMany.png)
+
+
+
+> ERD with Cardinality
+* ![markdown logo](./images/erdcardinality.png)
+
+* Customer and order is a ONE to MANY relationship
+    * Customer can place many orders. But an order can only belong to one customer
+* Employee and Order is a ONE to MANY relationship
+    * An order can belong to only ONE employee. But an employee can take multiple orders
+* Order and Food is a MANY to MANY relationship. (This is a bad practice. We will fix it later)
+    * A same food item can be present in multiple orders. ( Cheese Burgers belong to 4 or 8 different customer orders) and an order can have multiple food items. Therefore, MANY to MANY relationship. Again this is a bad practice and we will address it later.
+    For now lets move on
+
+
+* ![markdown logo](./images/erdWithOptionality.png).
+* Now with the optionality in place, what we are saying is  --
+* A food item can exist without an order placed. Hence, a circle at the end of food to order connection. However, Order cannot exist without food.
+* Similarly, an order cannot exist without a customer. And neither can a customer exist without an order
+* Order cannot exist without an employee but an employee can exist without an order. 
