@@ -263,4 +263,53 @@
 * Now with the optionality in place, what we are saying is  --
 * A food item can exist without an order placed. Hence, a circle at the end of food to order connection. However, Order cannot exist without food.
 * Similarly, an order cannot exist without a customer. And neither can a customer exist without an order
-* Order cannot exist without an employee but an employee can exist without an order. ...
+* Order cannot exist without an employee but an employee can exist without an order.
+
+> Solution of Many To Many Relationship in the above ERD Diagram between foor and orders ( a single food item can exist in many orders and  a single food order can contain many food items)
+---
+![markdown logo](./images/manyToManySolution.png)
+* A second table named after a combination of the two tables which has a many to many relationship is created
+* The relationships are reversed ( cross - multiplied if that makes more sense ). The blue arrows point this reverse of relationships in the picture above.
+* So hree is a new version of the solved many to many relationship problem
+* 
+
+![markdown logo](./images/manyToManySolution2.png)
+
+
+> But the question is.... WHY can't we have a many to many relationship? We have seen a way to solve a many to many relatinship HOWEVER, we still have not seen the problems a database design can face when a many to many relationship exists between tables. 
+* The picture below shows the exact problem
+
+![markdown logo](./images/manyToManyProblem.png)
+
+* Since Food and Order have a many to many relationship
+    * ORDER_ID cannot be used as a secondary key in Food table
+    * Food_ID cannot be used as a secondary key in Order table
+    * If any of the two cases above is implemented, it leads to redundancy. 
+    * Ab yhan pe dimaag lga bhai itna straight forward nai hai par smjh aa jyga ek baar dhyaan se soch
+    
+---
+* For two food items to exist in same order, etiher two things can happpen
+* Either we can add two fields in a single cell - multiple food items that belong to one order (top-right fugure). This goes against the database design principle. The cells should have atomic data
+* Second problem can be seen in the 2 tables at the bootom. If we leave all the cells atomic, still another food item that belongs to same ORDER_ID must be entered. So the other bad solution would be to
+enter another record of same ORDER_ID but different FOOD_ID. BUT now the primary key is being repeated. We cannot have redundant / duplicate primary keys 🔑 ⛔️
+
+* > The solution is we create a compositite key
+* A composite key is a combination of 2 primary keys of two different tables.
+* In the many to many relationship of Food table and Order table - We create another table of a combination of the primary keys of the two tables
+* The primary key in this new table is a combination of the FOOD_ID and ORDER_ID. Hence, a composite key 🔑
+* A Composite Key 🔑 is also unique in a table just like a primary key. However, this composite key is a combination of two different primary keys. (ORDER_ID and FOOD_ID).
+* Therefore, in order to use this composite key as a primary key, it must behave as a primary key. 
+* Which means, the combination of the two primay keys must be unique throughout a table. 
+
+![markdown logo](./images/composite_key.png)
+
+* In the above picture, FOOD_ID and ORDER_ID is combined to make another table called "Food-Order" table.
+* This solves the many to many relationship.
+* In this picture, the primary key is a composite key, which means the primary key is a combination of FOOD_ID and ORDER_ID
+
+
+> So the final Entity Relationship Diagram with a solution of Many to Many Relationship problem looks like this - 
+
+![markdown logo](./images/ERDWithManyToManySolved.png)
+* Now Food table and Order table instead of having a many to many relationship, have a ONE to MANY relationship with the new Food-Order table
+* The Food-Order table has a composite key that comprises of FOOD_ID and ORDER_ID
