@@ -235,20 +235,20 @@
 > # Cardinality
 * One to One
 ---
-<!-- * ![markdown logo](./images/oneTOone.png) -->
+* ![markdown logo](./images/oneTOone.png)
 *  One passport can only be given to one person. or SIN number belongs to one individual only
 
 * One to Many
-<!-- * ![markdown logo](./images/oneTOmany.png) -->
+* ![markdown logo](./images/oneTOmany.png)
 * Denoted by a multiple end points. 
 
 
-<!-- * ![markdown logo](./images/ManyTOMany.png) -->
+* ![markdown logo](./images/ManyTOMany.png)
 
 
 
 > ERD with Cardinality
-<!-- * ![markdown logo](./images/erdcardinality.png) -->
+* ![markdown logo](./images/erdcardinality.png)
 
 * Customer and order is a ONE to MANY relationship
     * Customer can place many orders. But an order can only belong to one customer
@@ -259,7 +259,7 @@
     For now lets move on
 
 
-<!-- * ![markdown logo](./images/erdWithOptionality.png). -->
+* ![markdown logo](./images/erdWithOptionality.png).
 * Now with the optionality in place, what we are saying is  --
 * A food item can exist without an order placed. Hence, a circle at the end of food to order connection. However, Order cannot exist without food.
 * Similarly, an order cannot exist without a customer. And neither can a customer exist without an order
